@@ -3,130 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elementgas | Доставка 24/7 Бишкек</title>
+    <title>Elementgas — Доставка 24/7 Бишкек</title>
     <style>
         :root {
-            --neon-pink: #ff5e92;
-            --neon-purple: #6b3096;
-            --bg-dark: #0b0d17;
+            --pink: #ff5e92;
+            --purple: #6b3096;
+            --dark-bg: #0b0d17;
             --card-bg: #161b2c;
         }
 
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--bg-dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
             color: #ffffff;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
         }
 
-        .container {
+        .wrapper {
             width: 100%;
             max-width: 480px;
             padding: 20px;
-            box-sizing: border-box;
             text-align: center;
         }
 
-        .logo {
-            width: 150px;
+        .logo-img {
+            width: 160px;
             margin-top: 20px;
-            filter: drop-shadow(0 0 8px var(--neon-pink));
+            filter: drop-shadow(0 0 10px var(--pink));
         }
 
         h1 {
-            font-size: 28px;
-            margin: 15px 0 5px;
-            background: linear-gradient(to right, var(--neon-pink), var(--neon-purple));
+            font-size: 32px;
+            margin: 10px 0;
+            background: linear-gradient(45deg, var(--pink), var(--purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .tagline {
-            color: #8892b0;
-            margin-bottom: 25px;
+        .status-badge {
+            display: inline-block;
+            border: 1px solid var(--pink);
+            color: var(--pink);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
         }
 
-        .info-box {
+        .info-section {
             background: var(--card-bg);
-            border: 1px solid rgba(255, 94, 146, 0.2);
-            border-radius: 15px;
+            border-radius: 20px;
             padding: 20px;
             margin-bottom: 25px;
-            line-height: 1.5;
+            border: 1px solid rgba(255, 94, 146, 0.1);
         }
 
-        .contact-btn {
+        .info-section p {
+            line-height: 1.5;
+            color: #d1d1d1;
+            margin: 10px 0;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .action-btn {
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
             color: white;
             font-weight: bold;
-            padding: 16px;
-            border-radius: 12px;
-            margin-bottom: 12px;
+            padding: 18px;
+            border-radius: 15px;
             transition: 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 16px;
         }
 
-        .btn-tg { background-color: #0088cc; box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3); }
-        .btn-wa { background-color: #25d366; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
-        .btn-ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .tg-btn { background-color: #0088cc; box-shadow: 0 5px 15px rgba(0, 136, 204, 0.3); }
+        .wa-btn { background-color: #25d366; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3); }
+        .ig-btn { background: linear-gradient(45deg, #f09433, #bc1888); }
 
-        .contact-btn:hover {
+        .action-btn:hover {
             transform: translateY(-3px);
             filter: brightness(1.1);
         }
 
-        .address-section {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #a8b2d1;
+        .contacts-footer {
+            margin-top: 40px;
+            padding-bottom: 20px;
+            color: #8892b0;
+            font-size: 14px;
         }
 
-        .badge {
-            display: inline-block;
-            background: rgba(255, 94, 146, 0.1);
-            color: var(--neon-pink);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            margin-bottom: 10px;
-            border: 1px solid var(--neon-pink);
-        }
+        .contacts-footer p { margin: 5px 0; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <img src="https://syrgakovakjol2010-bot.github.io/-Mistori-Copani/1000062727.jpg" alt="Elementgas Logo" class="logo">
+    <div class="wrapper">
+        <img src="https://syrgakovakjol2010-bot.github.io/-Mistori-Copani/1000062727.jpg" alt="Elementgas" class="logo-img">
         
         <h1>Elementgas</h1>
-        <p class="tagline">Безопасно. Легально. Надежно.</p>
+        <div class="status-badge">Работаем Круглосуточно 24/7</div>
 
-        <div class="info-box">
-            <span class="badge">Сертифицировано по ГОСТ</span>
-            <p>Закись азота исключительно легального качества. Каждый баллон запечатан и проверен.</p>
-            <p><strong>Круглосуточная доставка по Бишкеку и КР.</strong></p>
+        <div class="info-section">
+            <p><strong>Закись азота с сертификатом ГОСТ</strong></p>
+            <p>Поставляем исключительно легальную продукцию. Каждый баллон запечатан. Курьер предоставит копию сертификата по требованию.</p>
         </div>
 
-        <a href="https://t.me/Funnyballs_bot" class="contact-btn btn-tg">Заказать в Telegram</a>
-        <a href="https://wa.me/447799561496" class="contact-btn btn-wa">Написать в WhatsApp</a>
-        <a href="https://www.instagram.com/element.gas" class="contact-btn btn-ig">Наш Instagram</a>
+        <div class="links-container">
+            <a href="https://t.me/Funnyballs_bot" class="action-btn tg-btn">ЗАКАЗАТЬ В TELEGRAM</a>
+            <a href="https://wa.me/447799561496" class="action-btn wa-btn">НАПИСАТЬ В WHATSAPP</a>
+            <a href="https://www.instagram.com/element.gas" class="action-btn ig-btn">ИНСТАГРАМ</a>
+        </div>
 
-        <div class="address-section">
+        <div class="contacts-footer">
             <p>📍 г. Бишкек, Проспект Чуй 271</p>
             <p>📞 +44 7799 561496</p>
             <p>📧 Elementgas.gas@gmail.com</p>
-            <p style="color: var(--neon-pink); font-weight: bold; margin-top: 15px;">РАБОТАЕМ 24/7</p>
+            <p style="margin-top: 15px; opacity: 0.6;">© 2026 Elementgas. Доставка по всему КР.</p>
         </div>
     </div>
 
 </body>
 </html>
-
