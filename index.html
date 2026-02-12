@@ -3,68 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Element Gas KG - Заказ</title>
+    <title>Element Gas KG</title>
     <style>
-        body, html { margin: 0; padding: 0; background-color: #0b0b1a; font-family: sans-serif; }
+        body, html { margin: 0; padding: 0; background-color: #0b0b1a; font-family: 'Segoe UI', sans-serif; }
         
-        /* Контейнер с твоим дизайном из Canva на фоне */
-        .site-container {
+        .main-wrapper {
             width: 100%;
-            max-width: 450px; /* Размер под мобильный экран */
+            max-width: 500px; /* Размер под мобильный экран */
             margin: 0 auto;
             position: relative;
-            background-image: url('design.png'); /* ТВОЙ ДИЗАЙН ТУТ */
-            background-size: contain;
-            background-repeat: no-repeat;
-            min-height: 1200px; /* Подстрой под высоту своего дизайна */
+            /* ТВОЙ ДИЗАЙН ИЗ КАНВЫ СТАНОВИТСЯ ФОНОМ */
+            background-image: url('design.png'); 
+            background-size: cover;
+            background-position: top center;
+            min-height: 1600px; /* Высота всей картинки из Канвы */
         }
 
-        /* Блок Прайс-листа в пустое место */
-        .price-section {
+        /* БЛОК ПРАЙС-ЛИСТА (вставляется в белое пространство) */
+        .price-overlay {
             position: absolute;
-            top: 750px; /* Настрой это число, чтобы попасть ровно в пустое место */
-            left: 5%;
-            width: 90%;
-            background: white;
-            border-radius: 15px;
-            padding: 15px;
-            box-sizing: border-box;
-            color: #333;
+            top: 780px; /* МЕНЯЙ ЭТО ЧИСЛО, чтобы двигать блок выше/ниже */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 85%;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        .price-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-        .price-table th { text-align: left; color: #888; padding-bottom: 10px; }
-        .price-table td { padding: 8px 0; border-bottom: 1px solid #eee; }
-        .price-table tr:last-child td { border: none; }
+        h2 { margin-top: 0; color: #333; font-size: 20px; text-align: center; }
+        
+        table { width: 100%; border-collapse: collapse; color: #333; }
+        th { text-align: left; font-size: 12px; color: #999; text-transform: uppercase; padding-bottom: 10px; }
+        td { padding: 10px 0; border-bottom: 1px solid #eee; font-size: 15px; }
+        .bold { font-weight: bold; }
 
-        /* Кнопка Телеграм бота */
-        .bot-btn {
+        /* КНОПКА ТЕЛЕГРАМ */
+        .tg-btn {
             display: block;
-            background: linear-gradient(90deg, #8e2de2, #4a00e0);
-            color: white;
+            margin-top: 20px;
+            background: linear-gradient(90deg, #bc13fe, #4a00e0);
+            color: #fff;
             text-align: center;
-            padding: 15px;
-            border-radius: 12px;
+            padding: 16px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .footer-note {
-            text-align: center;
-            color: white;
-            font-size: 12px;
-            margin-top: 20px;
-            opacity: 0.7;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
 
-<div class="site-container">
-    <div class="price-section">
-        <table class="price-table">
+<div class="main-wrapper">
+    <div class="price-overlay">
+        <h2>Прайс-лист</h2>
+        <table>
             <thead>
                 <tr>
                     <th>Объем</th>
@@ -73,21 +68,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>10 л (200-220 шаров)</td><td><b>18 500 с</b></td><td>15 500 с</td></tr>
-                <tr><td>5 л (120-130 шаров)</td><td><b>15 000 с</b></td><td>12 000 с</td></tr>
-                <tr><td>4 л (90-100 шаров)</td><td><b>13 000 с</b></td><td>10 000 с</td></tr>
-                <tr><td>2 л (40-45 шаров)</td><td><b>9 000 с</b></td><td>6 000 с</td></tr>
-                <tr><td>1 л (20-25 шаров)</td><td><b>7 500 с</b></td><td>4 500 с</td></tr>
+                <tr><td>10 л (220 шаров)</td><td class="bold">18 500 с</td><td>15 500 с</td></tr>
+                <tr><td>5 л (130 шаров)</td><td class="bold">15 000 с</td><td>12 000 с</td></tr>
+                <tr><td>4 л (100 шаров)</td><td class="bold">13 000 с</td><td>10 000 с</td></tr>
+                <tr><td>2 л (45 шаров)</td><td class="bold">9 000 с</td><td>6 000 с</td></tr>
+                <tr><td>1 л (25 шаров)</td><td class="bold">7 500 с</td><td>4 500 с</td></tr>
             </tbody>
         </table>
 
-        <a href="https://t.me/element_gas_bot" class="bot-btn">
-            ✈️ ЗАКАЗАТЬ ЧЕРЕЗ TELEGRAM БОТА
+        <a href="https://t.me/element_gas_bot" class="tg-btn">
+            ЗАКАЗАТЬ ЧЕРЕЗ TELEGRAM БОТА
         </a>
     </div>
 </div>
-
-<div class="footer-note">Разработано Mistori Copani</div>
 
 </body>
 </html>
