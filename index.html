@@ -3,97 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Element Gas KG | Закись азота в Кыргызстане</title>
+    <title>Element Gas KG - Заказ</title>
     <style>
-        :root {
-            --bg-color: #0b0b1a;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --accent-color: #bc13fe;
-            --text-color: #ffffff;
-        }
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        .container { max-width: 800px; margin: 0 auto; }
-        header { text-align: center; padding: 40px 0; }
-        h1 { color: var(--accent-color); font-size: 2.5rem; margin-bottom: 10px; }
+        body, html { margin: 0; padding: 0; background-color: #0b0b1a; font-family: sans-serif; }
         
-        .section {
-            background: var(--card-bg);
-            padding: 25px;
+        /* Контейнер с твоим дизайном из Canva на фоне */
+        .site-container {
+            width: 100%;
+            max-width: 450px; /* Размер под мобильный экран */
+            margin: 0 auto;
+            position: relative;
+            background-image: url('design.png'); /* ТВОЙ ДИЗАЙН ТУТ */
+            background-size: contain;
+            background-repeat: no-repeat;
+            min-height: 1200px; /* Подстрой под высоту своего дизайна */
+        }
+
+        /* Блок Прайс-листа в пустое место */
+        .price-section {
+            position: absolute;
+            top: 750px; /* Настрой это число, чтобы попасть ровно в пустое место */
+            left: 5%;
+            width: 90%;
+            background: white;
             border-radius: 15px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(188, 19, 254, 0.2);
-        }
-        
-        .price-list { list-style: none; padding: 0; }
-        .price-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .trust-box { border-left: 4px solid var(--accent-color); padding-left: 15px; }
-        
-        .bot-button {
-            display: block;
-            text-align: center;
-            background: linear-gradient(45deg, #8e2de2, #4a00e0);
-            color: white;
-            text-decoration: none;
             padding: 15px;
-            border-radius: 10px;
-            font-weight: bold;
-            margin-top: 20px;
+            box-sizing: border-box;
+            color: #333;
         }
-        footer { text-align: center; font-size: 0.8rem; opacity: 0.6; margin-top: 50px; }
+
+        .price-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .price-table th { text-align: left; color: #888; padding-bottom: 10px; }
+        .price-table td { padding: 8px 0; border-bottom: 1px solid #eee; }
+        .price-table tr:last-child td { border: none; }
+
+        /* Кнопка Телеграм бота */
+        .bot-btn {
+            display: block;
+            background: linear-gradient(90deg, #8e2de2, #4a00e0);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .footer-note {
+            text-align: center;
+            color: white;
+            font-size: 12px;
+            margin-top: 20px;
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>ELEMENT GAS KG</h1>
-            <p>Продажа и бесплатная доставка закиси азота по всему Кыргызстану</p>
-        </header>
 
-        <div class="section">
-            <h2>💰 Прайс-лист</h2>
-            <div class="price-list">
-                <div class="price-item"><span>10 л (200-220 шаров)</span> <strong>18 500 сом</strong></div>
-                <div class="price-item"><span>5 л (120-130 шаров)</span> <strong>15 000 сом</strong></div>
-                <div class="price-item"><span>4 л (90-100 шаров)</span> <strong>13 000 сом</strong></div>
-                <div class="price-item"><span>2 л (40-45 шаров)</span> <strong>9 000 сом</strong></div>
-                <div class="price-item"><span>1 л (20-25 шаров)</span> <strong>7 500 сом</strong></div>
-            </div>
-            <p style="font-size: 0.9rem; margin-top: 15px;">* Возможна замена газа по сниженной цене.</p>
-        </div>
+<div class="site-container">
+    <div class="price-section">
+        <table class="price-table">
+            <thead>
+                <tr>
+                    <th>Объем</th>
+                    <th>Продажа</th>
+                    <th>Замена</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>10 л (200-220 шаров)</td><td><b>18 500 с</b></td><td>15 500 с</td></tr>
+                <tr><td>5 л (120-130 шаров)</td><td><b>15 000 с</b></td><td>12 000 с</td></tr>
+                <tr><td>4 л (90-100 шаров)</td><td><b>13 000 с</b></td><td>10 000 с</td></tr>
+                <tr><td>2 л (40-45 шаров)</td><td><b>9 000 с</b></td><td>6 000 с</td></tr>
+                <tr><td>1 л (20-25 шаров)</td><td><b>7 500 с</b></td><td>4 500 с</td></tr>
+            </tbody>
+        </table>
 
-        <div class="section trust-box">
-            <h2>🛡️ Ваше доверие — наш приоритет</h2>
-            <ul>
-                <li><strong>Целостность товара:</strong> Гарантируем герметичность и сохранность каждого баллона.</li>
-                <li><strong>Стандарты КР:</strong> Вся продукция сертифицирована по государственным стандартам Кыргызстана.</li>
-                <li><strong>Безопасность данных:</strong> Ваши персональные данные находятся под надежной защитой.</li>
-            </ul>
-        </div>
-
-        <div class="section" style="text-align: center;">
-            <h2>🤖 Быстрый заказ (от 3-х баллонов)</h2>
-            <p>Используйте наш Telegram бот для автоматического оформления:</p>
-            <a href="https://t.me/element_gas_bot" class="bot-button">ОТКРЫТЬ TELEGRAM БОТА</a>
-        </div>
-
-        <footer>
-            <p>г. Кара-Балта, Кыргызстан</p>
-            <p>Разработка и дизайн: Mistori Copani</p>
-        </footer>
+        <a href="https://t.me/element_gas_bot" class="bot-btn">
+            ✈️ ЗАКАЗАТЬ ЧЕРЕЗ TELEGRAM БОТА
+        </a>
     </div>
+</div>
+
+<div class="footer-note">Разработано Mistori Copani</div>
+
 </body>
-</html>
 </html>
