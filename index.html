@@ -3,438 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elementgas | Официальный сайт</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Element Gas KG | Закись азота в Кыргызстане</title>
     <style>
-        /* --- НАСТРОЙКИ ДИЗАЙНА --- */
         :root {
-            --neon-pink: #ff5e92;
-            --neon-purple: #6b3096;
-            --bg-dark: #0b0d17;
-            --card-bg: #161b2c;
-            --text-white: #ffffff;
-            --text-gray: #a8b2d1;
+            --bg-color: #0b0b1a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --accent-color: #bc13fe;
+            --text-color: #ffffff;
         }
-
-        /* Сброс стилей */
-        * {
-            box-sizing: border-box;
-            outline: none;
-        }
-
         body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-white);
-            overflow-x: hidden; /* Скрываем горизонтальную прокрутку */
-        }
-
-        /* Контейнер для центрирования контента */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* --- ШАПКА САЙТА --- */
-        header {
-            text-align: center;
-            padding: 50px 0 30px;
-        }
-
-        .logo {
-            width: 200px;
-            height: auto;
-            filter: drop-shadow(0 0 15px var(--neon-pink)); /* Неоновое свечение лого */
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem); /* Адаптивный размер шрифта */
-            margin: 10px 0;
-            background: linear-gradient(45deg, var(--neon-pink), var(--neon-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            line-height: 1.1;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-gray);
-            max-width: 600px;
-            margin: 10px auto;
-        }
-
-        /* --- БЛОК "О КОМПАНИИ" --- */
-        .about-section {
-            background: linear-gradient(135deg, rgba(22, 27, 44, 0.8), rgba(107, 48, 150, 0.1));
-            border: 1px solid var(--neon-purple);
-            border-radius: 20px;
-            padding: 40px;
-            margin: 40px auto 60px;
-            max-width: 900px;
-            box-shadow: 0 0 30px rgba(107, 48, 150, 0.15);
-            text-align: left;
-        }
-
-        .about-title {
-            color: var(--neon-pink);
-            font-size: 1.8rem;
-            margin-top: 0;
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .about-text {
-            font-size: 1.05rem;
+            padding: 20px;
             line-height: 1.6;
-            color: #e0e0e0;
-            margin-bottom: 15px;
         }
-
-        .highlight {
-            color: var(--neon-pink);
-            font-weight: bold;
-        }
-
-        .warning-box {
-            background: rgba(255, 94, 146, 0.1);
-            border-left: 4px solid var(--neon-pink);
-            padding: 15px;
-            margin: 20px 0;
-            font-style: italic;
-        }
-
-        /* --- ПРАЙС-ЛИСТ --- */
-        .section-heading {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            color: white;
-        }
-
-        .price-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .price-card {
+        .container { max-width: 800px; margin: 0 auto; }
+        header { text-align: center; padding: 40px 0; }
+        h1 { color: var(--accent-color); font-size: 2.5rem; margin-bottom: 10px; }
+        
+        .section {
             background: var(--card-bg);
-            border-radius: 25px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .price-card:hover {
-            border-color: var(--neon-pink);
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(255, 94, 146, 0.2);
-        }
-
-        .vol-title {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: var(--neon-pink);
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .balloons-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-gray);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 8px 15px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        /* Контейнер для фото баллона */
-        .product-image {
-            width: 100%;
-            height: 220px;
-            background: rgba(0, 0, 0, 0.2);
+            padding: 25px;
             border-radius: 15px;
             margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
+            border: 1px solid rgba(188, 19, 254, 0.2);
         }
-
-        .product-image img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
-        }
-
-        /* Строки с ценами */
-        .price-row {
+        
+        .price-list { list-style: none; padding: 0; }
+        .price-item {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-
-        .price-label {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            text-align: left;
-        }
-
-        .price-value {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: white;
-        }
-
-        /* --- КНОПКИ И ФУТЕР --- */
-        .cta-section {
-            background: linear-gradient(to top, rgba(11, 13, 23, 1), rgba(22, 27, 44, 0));
-            padding: 40px 0;
+        
+        .trust-box { border-left: 4px solid var(--accent-color); padding-left: 15px; }
+        
+        .bot-button {
+            display: block;
             text-align: center;
-        }
-
-        .btn-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+            background: linear-gradient(45deg, #8e2de2, #4a00e0);
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
             margin-top: 20px;
         }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 18px 40px;
-            border-radius: 15px;
-            text-decoration: none;
-            color: white;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 1rem;
-            min-width: 280px;
-            transition: transform 0.2s, filter 0.2s;
-        }
-
-        .btn:hover {
-            transform: scale(1.03);
-            filter: brightness(1.1);
-        }
-
-        .btn-tg { background: #0088cc; box-shadow: 0 4px 20px rgba(0, 136, 204, 0.4); }
-        .btn-wa { background: #25d366; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
-        .btn-ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-
-        footer {
-            margin-top: 50px;
-            padding: 40px 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-gray);
-            font-size: 0.9rem;
-            text-align: center;
-        }
-
-        .footer-info p { margin: 8px 0; }
-
-        /* Адаптив для телефонов */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            .about-section { padding: 25px; margin: 20px 0; }
-            .btn { width: 100%; }
-        }
+        footer { text-align: center; font-size: 0.8rem; opacity: 0.6; margin-top: 50px; }
     </style>
 </head>
 <body>
-
     <div class="container">
-        
         <header>
-            <img src="logo.png" alt="Elementgas Logo" class="logo">
-            <h1>Elementgas</h1>
-            <p class="subtitle">Качественный газ с круглосуточной доставкой по КР. Безопасно. Легально. Надежно.</p>
+            <h1>ELEMENT GAS KG</h1>
+            <p>Продажа и бесплатная доставка закиси азота по всему Кыргызстану</p>
         </header>
 
-        <section class="about-section">
-            <h2 class="about-title">О компании</h2>
-            
-            <p class="about-text">
-                <strong>Закись азота? Только с сертификатом! Только от Elementgas!</strong>
-            </p>
-            <p class="about-text">
-                Наша компания поставляет исключительно <span class="highlight">легальную и сертифицированную продукцию по ГОСТ</span>. Каждый баллон — запечатан и проверен.
-            </p>
-
-            <div class="warning-box">
-                Не покупайте сомнительный контрафакт! Это риск для здоровья и репутации.
+        <div class="section">
+            <h2>💰 Прайс-лист</h2>
+            <div class="price-list">
+                <div class="price-item"><span>10 л (200-220 шаров)</span> <strong>18 500 сом</strong></div>
+                <div class="price-item"><span>5 л (120-130 шаров)</span> <strong>15 000 сом</strong></div>
+                <div class="price-item"><span>4 л (90-100 шаров)</span> <strong>13 000 сом</strong></div>
+                <div class="price-item"><span>2 л (40-45 шаров)</span> <strong>9 000 сом</strong></div>
+                <div class="price-item"><span>1 л (20-25 шаров)</span> <strong>7 500 сом</strong></div>
             </div>
-
-            <p class="about-text">
-                Курьер привезет вам не только газ, но и <strong>копию сертификата</strong> по вашему требованию.
-            </p>
-            <p class="about-text" style="text-align: right; font-weight: bold; color: var(--neon-pink);">
-                Работаем Круглосуточно 24/7
-            </p>
-        </section>
-
-        <h2 class="section-heading">Наш Прайс-лист</h2>
-        
-        <div class="price-grid">
-
-            <div class="price-card">
-                <span class="vol-title">10 ЛИТРОВ</span>
-                <span class="balloons-badge">🎈 ~ 200-220 ШАРОВ</span>
-                
-                <div class="product-image">
-                    <img src="ballon.png" alt="Баллон 10 литров">
-                </div>
-
-                <div class="price-row">
-                    <span class="price-label">Продажа с баллоном</span>
-                    <span class="price-value">18 500 с.</span>
-                </div>
-                <div class="price-row">
-                    <span class="price-label">Замена баллона</span>
-                    <span class="price-value">15 500 с.</span>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <span class="vol-title">5 ЛИТРОВ</span>
-                <span class="balloons-badge">🎈 ~ 120-130 ШАРОВ</span>
-                
-                <div class="product-image">
-                    <img src="ballon.png" alt="Баллон 5 литров">
-                </div>
-
-                <div class="price-row">
-                    <span class="price-label">Продажа с баллоном</span>
-                    <span class="price-value">15 000 с.</span>
-                </div>
-                <div class="price-row">
-                    <span class="price-label">Замена баллона</span>
-                    <span class="price-value">12 000 с.</span>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <span class="vol-title">4 ЛИТРА</span>
-                <span class="balloons-badge">🎈 ~ 90-100 ШАРОВ</span>
-                
-                <div class="product-image">
-                    <img src="ballon.png" alt="Баллон 4 литра">
-                </div>
-
-                <div class="price-row">
-                    <span class="price-label">Продажа с баллоном</span>
-                    <span class="price-value">13 000 с.</span>
-                </div>
-                <div class="price-row">
-                    <span class="price-label">Замена баллона</span>
-                    <span class="price-value">10 000 с.</span>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <span class="vol-title">2 ЛИТРА</span>
-                <span class="balloons-badge">🎈 ~ 40-45 ШАРОВ</span>
-                
-                <div class="product-image">
-                    <img src="ballon.png" alt="Баллон 2 литра">
-                </div>
-
-                <div class="price-row">
-                    <span class="price-label">Продажа с баллоном</span>
-                    <span class="price-value">9 000 с.</span>
-                </div>
-                <div class="price-row">
-                    <span class="price-label">Замена баллона</span>
-                    <span class="price-value">6 000 с.</span>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <span class="vol-title">1 ЛИТР</span>
-                <span class="balloons-badge">🎈 ~ 20-25 ШАРОВ</span>
-                
-                <div class="product-image">
-                    <img src="ballon.png" alt="Баллон 1 литр">
-                </div>
-
-                <div class="price-row">
-                    <span class="price-label">Продажа с баллоном</span>
-                    <span class="price-value">7 500 с.</span>
-                </div>
-                <div class="price-row">
-                    <span class="price-label">Замена баллона</span>
-                    <span class="price-value">4 500 с.</span>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <span class="vol-title">3.5 ЛИТРА</span>
-                <span class="balloons-badge">🎈 ~ 20-25 ШАРОВ</span>
-                
-                <div class="product-image">
-                    <img src="ballon.png" alt="Баллон 3.5 литра">
-                </div>
-
-                <div class="price-row">
-                    <span class="price-label">Продажа с баллоном</span>
-                    <span class="price-value">7 300 с.</span>
-                </div>
-                <div class="price-row">
-                    <span class="price-label">Замена баллона</span>
-                    <span class="price-value">4 300 с.</span>
-                </div>
-            </div>
-
+            <p style="font-size: 0.9rem; margin-top: 15px;">* Возможна замена газа по сниженной цене.</p>
         </div>
 
-        <section class="cta-section">
-            <h2 style="text-transform: uppercase; margin-bottom: 30px;">Свяжитесь с нами</h2>
-            
-            <div class="btn-group">
-                <a href="https://t.me/Funnyballs_bot" class="btn btn-tg">
-                    Заказать в Telegram
-                </a>
-                <a href="https://wa.me/447799561496" class="btn btn-wa">
-                    Написать в WhatsApp
-                </a>
-                <a href="https://www.instagram.com/element.gas" class="btn btn-ig">
-                    Наш Instagram
-                </a>
-            </div>
-        </section>
+        <div class="section trust-box">
+            <h2>🛡️ Ваше доверие — наш приоритет</h2>
+            <ul>
+                <li><strong>Целостность товара:</strong> Гарантируем герметичность и сохранность каждого баллона.</li>
+                <li><strong>Стандарты КР:</strong> Вся продукция сертифицирована по государственным стандартам Кыргызстана.</li>
+                <li><strong>Безопасность данных:</strong> Ваши персональные данные находятся под надежной защитой.</li>
+            </ul>
+        </div>
+
+        <div class="section" style="text-align: center;">
+            <h2>🤖 Быстрый заказ (от 3-х баллонов)</h2>
+            <p>Используйте наш Telegram бот для автоматического оформления:</p>
+            <a href="https://t.me/element_gas_bot" class="bot-button">ОТКРЫТЬ TELEGRAM БОТА</a>
+        </div>
 
         <footer>
-            <div class="footer-info">
-                <p>📍 г. Бишкек, Проспект Чуй 271</p>
-                <p>📞 <a href="tel:+447799561496" style="color: white; text-decoration: none;">+44 7799 561496</a></p>
-                <p>📧 Elementgas.gas@gmail.com</p>
-                <p style="margin-top: 20px; opacity: 0.5; font-size: 0.8rem;">
-                    © 2026 Elementgas. Все права защищены.
-                </p>
-            </div>
+            <p>г. Кара-Балта, Кыргызстан</p>
+            <p>Разработка и дизайн: Mistori Copani</p>
         </footer>
-
     </div>
-
 </body>
+</html>
 </html>
